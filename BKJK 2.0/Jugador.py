@@ -1,5 +1,5 @@
 import baraja as mazo
-import otra_prueba
+import verificacion_mano as vm
 
 class Jugador():
     
@@ -20,7 +20,7 @@ class Jugador():
         
         #if (suma_cartas_jugador > 21 and self.contiene_as()):
         #    suma_cartas_jugador -= 10
-        if (otra_prueba.contiene_as(self.hand) == True and otra_prueba.contiene_figura(self.hand) == True):
+        if (vm.contiene_as(self.hand) == True and vm.contiene_figura(self.hand) == True):
             print(f"Cartas de {self.nombre_jugador} son: [{self.hand[0]}][{self.hand[1]}] - BURAKKU JAKKU")
         else:
             print(f"Cartas de {self.nombre_jugador} son: [{self.hand[0]}][{self.hand[1]}] y suman {suma_cartas_jugador}")

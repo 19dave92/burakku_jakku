@@ -2,8 +2,8 @@ def contiene_as(hand):
     for x in range(len(hand)):
         if ('AS' in hand[x] ):
             return True
-        else:
-            return False
+            #print(salida)
+
     
 def contiene_figura(hand):
     for x in range(len(hand)):
@@ -12,10 +12,10 @@ def contiene_figura(hand):
             'J' in hand[x] or 
             '10' in hand[x]):
             return True           
-        else:
-            return False
+            
         
-hand = ['K♥','AS♥']
-hand_2 = ['7♥','8♥']
+#hand = ['K♥','AS♥']
+#hand2 = ['7♥','8♥']
+#hand3 = ['10♥','8♥']
 
-print(contiene_as(hand))
+#print(contiene_figura(hand2))
