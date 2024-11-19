@@ -56,4 +56,4 @@ while(True):
         print("Ingresa una opcion valida")
 
 
-# IMPORTANTE: Si la primera carta del croupier es un AS, puede MIRAR LA CARTA ESCONDIDA.
+# IMPORTANTE: Si la primera carta del croupier es un AS, puede MIRAR LA CARTA ESCONDIDA para ver si tiene BJ.
