@@ -46,12 +46,14 @@ while(True):
             nombre_buscar = i
             jugador_buscado = diccionario_jugadores.get(nombre_buscar)
             jugador_buscado.mano(mano_inicial[indice])
+            #el metodo mano muestra las cartas de cada jugador.
             indice += 1
             
-            if indice == len(listado_de_jugadores): 
-                indice = 0  #Si no reiniciamos el indice despues cuando lo volvamos a utilizar dara "Error out of limit"    
-                
+        indice = 0
         break
     else:
         #Se muestra si el jugador no ingresa REGLAS o JUGAR 
         print("Ingresa una opcion valida")
+
+
+# IMPORTANTE: Si la primera carta del croupier es un AS, puede MIRAR LA CARTA ESCONDIDA.

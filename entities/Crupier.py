@@ -1,5 +1,5 @@
 import modules.baraja as mazo
-#import verificacion_mano
+import modules.verificacion_mano as vm
 
 class Crupier:
 
@@ -21,11 +21,15 @@ class Crupier:
         #if (sum(valor_cartas) > 21 and vm.contiene_as(self.mano_inicial_crupier)):
         #    suma_cartas_jugador -= 10
 
-        #if (verificacion_mano.contiene_AS(self.mano_inicial_crupier)       == True and 
-        #    verificacion_mano.contiene_FIGURA(self.mano_inicial_crupier)   == True      ):
-        #    print(f"Cartas del CRUPIER: [{self.mano_inicial_crupier[0]}][{self.mano_inicial_crupier[1]}] - BURAKKU JAKKU")
-        #else:
-            #print(f"Cartas del CRUPIER: [{self.mano_inicial_crupier[0]}][¿?]")
+
+# IMPORTANTE: Si la primera carta del croupier es un AS, puede MIRAR LA CARTA ESCONDIDA para ver si tiene BJ.
+# Hay que revisar si la carta visible es un AS
+
+        if (vm.contiene_AS(self.mano_inicial_crupier)       == True and 
+            vm.contiene_FIGURA(self.mano_inicial_crupier)   == True      ):
+            print(f"Cartas del CRUPIER: [{self.mano_inicial_crupier[0]}][{self.mano_inicial_crupier[1]}] - BURAKKU JAKKU")
+        else:
+            print(f"Cartas del CRUPIER: [{self.mano_inicial_crupier[0]}][¿?]")
             #print(f"Cartas del CRUPIER: [{self.mano_inicial_crupier[0]}][{self.mano_inicial_crupier[1]}] y suman {sum(self.valor_cartas)}")
         
         #if (verificacion_mano.carta_visible_AS(self.mano_inicial_crupier)):

@@ -1,7 +1,15 @@
+
+
+#Verifica si la mano contiene un AS
 def contiene_AS(hand):
-    for x in range(len(hand)):
-        if ('AS' in hand[x] ):
+    """
+    Verifica si la mano contiene un AS en cualquier posición
+    """          
+    for x in range(len(hand)):      # Recorremos la lista de cartas
+        if ('A' in hand[x] ):       # Si el caracter 'A' está en la cadena de texto de la posicion actual, regresa TRUE
             return True
+    
+    return False
 
 def contiene_FIGURA(hand):
     for x in range(len(hand)):
@@ -9,15 +17,15 @@ def contiene_FIGURA(hand):
             'Q' in hand[x] or 
             'J' in hand[x] or 
             '10' in hand[x]):
-            return True           
+            return True
+    return False           
 
 def esta_en_primera_posicion(posicion_carta):
     return posicion_carta == 0            
 
 def carta_visible_AS(hand):
-    
     for x in range(len(hand)):
-        if ('AS' in hand[x] ):
+        if ('A' in hand[x] ):
             if (esta_en_primera_posicion(x)):
                 print("¿Pagar seguro?")
                 #TODO: Verificar si la segunda carta es figura
@@ -33,11 +41,14 @@ def contiene_FIGURA_crupier(hand):
             return True           
 
 
-#hand = ['8♥', 'AS♥']
-hand = ['AS♥', '8♥']
-#hand2 = ['7♥','8♥']
+############# Zona de pruebitas
+"""
+#hand = ['8♥', 'A♥']
+hand = ['A♥', '8♥']
+#hand = ['7♥','8♥']
 #hand3 = ['10♥','8♥']
 
-#print(hand[0]) # >>> AS♥
+print(hand) # >>> AS♥
 
-#print(contiene_AS_crupier(hand))
+print(contiene_AS(hand))
+"""
